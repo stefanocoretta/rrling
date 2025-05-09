@@ -1,0 +1,12 @@
+$-- Implements the frontmatter, title page, and abstract.
+$--
+$-- %%%%%%%%%%%%%%%%
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+$if(abstract)$
+\abstract{$abstract$}
+$endif$
+\maketitle
+$endif$
