@@ -71,7 +71,7 @@
     \vspace*{-7em}
     \noindent
     \begin{minipage}[b]{0.7\textwidth}
-        \textbf{Registered Reports in Linguistics}, 2025, 1--XX
+        \textbf{Registered Reports in Linguistics}, \the\year, 1--XX
         \vspace{0.25em}\\
         \textcolor{yellow}{\aiDoi} 10.1000/182 \\
         Research article \textcolor{red}{\aiPreregistered} \textcolor{blue}{\aiOpenData} \textcolor{orange}{\aiOpenMaterials}
