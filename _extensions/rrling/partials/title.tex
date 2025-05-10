@@ -19,9 +19,8 @@ $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
 $-- This supports Quarto's authors normalization
-$for(authors)$
-\addauthor{$it.name.literal$}{$it.orcid$}{}
-$endfor$
+$by-author:_authors.tex()$
+$by-affiliation:_affiliations.tex()$
 \date{$date$}
 $if(keywords)$
 \keywords{$for(keywords)$$keywords$$sep$, $endfor$}

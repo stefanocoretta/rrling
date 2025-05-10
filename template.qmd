@@ -4,20 +4,19 @@ format:
   rrling-pdf: default
   rrling-html: default
 author:
-  - name: Sarah Malloc
+  - name: Stefano Coretta
+    orcid: 0000-0001-9627-5532
     affiliations:
-      - name: An Organization
-        department: The Department
-        address: 1 Main St
-        city: Boston
-        country: USA
-        postal-code: 02210-1022
-      - A second affilication
-    orcid: 0000-0000-0000-0000
-    email: sm@example.org
-  - name: Eliza Dealloc
+      - ref: UOE
+  - name: Jessica Hampton
+    orcid: 0000-0001-6871-2846
     affiliations:
-      - Another Affiliation
+      - ref: UOL
+affiliations:
+  - id: UOE
+    name: University of Edinburgh
+  - id: UOL
+    name: University of of Liverpool
 abstract: |
   This abstract serves as a generic template to guide authors in crafting effective summaries of their academic work. An ideal abstract should succinctly present the purpose of the study, the methodology employed, the key findings, and the principal conclusions. Begin by clearly stating the research question or objective, ensuring it reflects the core focus of the article. Follow with a brief description of the methods used, highlighting the design, data sources, and analytical techniques where applicable. Then, summarize the most significant results, avoiding excessive detail or technical jargon. Conclude with a statement on the broader implications or potential applications of the findings. The abstract should be self-contained, written in the past tense (except for conclusions or implications, which may be in the present), and limited to 200–250 words. Avoid citations, abbreviations, or references to tables and figures. Emphasize clarity, precision, and coherence to ensure accessibility to a wide readership, including those outside the immediate disciplinary field.
 keywords: [template, demo]

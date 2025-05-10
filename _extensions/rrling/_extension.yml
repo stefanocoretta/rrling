@@ -17,6 +17,8 @@ contributes:
       documentclass: rrling
       template-partials:
         - "partials/title.tex"
+        - "partials/_authors.tex"
+        - "partials/_affiliations.tex"
         - "partials/before-body.tex"
       format-resources:
         - rrling.cls
