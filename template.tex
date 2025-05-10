@@ -171,9 +171,6 @@ Hampton}{0000-0001-6871-2846}{2}
 \addaffiliation{1}{University of Edinburgh}\addaffiliation{2}{University
 of of Liverpool}
 \date{}
-\keywords{template, demo}
-
-\begin{document}
 \abstract{This abstract serves as a generic template to guide authors in
 crafting effective summaries of their academic work. An ideal abstract
 should succinctly present the purpose of the study, the methodology
@@ -190,6 +187,17 @@ present), and limited to 200--250 words. Avoid citations, abbreviations,
 or references to tables and figures. Emphasize clarity, precision, and
 coherence to ensure accessibility to a wide readership, including those
 outside the immediate disciplinary field.}
+\keywords{template, demo}
+
+\newfontfamily{\defaultfont}{Source Sans Pro}
+\newfontfamily{\CJKfont}{Yuppy SC}
+\newfontfamily{\Devanagarifont}{Noto Serif Devanagari}
+\usepackage[Latin,CJK,Devanagari,]{ucharclasses}
+\setTransitionsForLatin{\defaultfont}{}
+\setTransitionsForCJK{\CJKfont}{}
+\setTransitionsForDevanagari{\Devanagarifont}{}
+
+\begin{document}
 \maketitle
 
 
@@ -198,6 +206,12 @@ outside the immediate disciplinary field.}
 \emph{TODO} Create a template that demonstrates the appearance,
 formatting, layout, and functionality of your format. Learn more about
 journal formats at \url{https://quarto.org/docs/journals/}.
+
+You can mix scripts thanks to the LaTeX package \texttt{ucharclasses}.
+For example, this is Chinese 爱荷 and this is Sankrit देवनागरी
+\emph{devanāgarī} . The Latin font is Source Sans Pro and should not be
+changed. Source Sans Pro also supports the International Phonetic
+Alphabet: {[}ˌɪntəˈnæʃənəl fəˈnɛtɪk ˈælfəbɛt{]}.
 
 
 

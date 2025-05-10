@@ -22,6 +22,35 @@ $-- This supports Quarto's authors normalization
 $by-author:_authors.tex()$
 $by-affiliation:_affiliations.tex()$
 \date{$date$}
+$if(abstract)$
+\abstract{$abstract$}
+$endif$
 $if(keywords)$
 \keywords{$for(keywords)$$keywords$$sep$, $endfor$}
+$endif$
+
+$if(uchar)$
+\newfontfamily{\defaultfont}{Source Sans Pro}
+$if(uchar.groups)$
+$for(uchar.groups)$
+\newfontfamily{\$uchar.groups.group$font}{$uchar.groups.font$}
+$endfor$
+$endif$
+$if(uchar.blocks)$
+$for(uchar.blocks)$
+\newfontfamily{\$uchar.blocks.block$font}{$uchar.blocks.font$}
+$endfor$
+$endif$
+\usepackage[Latin,$for(uchar.groups)$$uchar.groups.group$$sep$,$endfor$,$for(uchar.blocks)$$uchar.blocks.block$$sep$,$endfor$]{ucharclasses}
+\setTransitionsForLatin{\defaultfont}{}
+$if(uchar.groups)$
+$for(uchar.groups)$
+\setTransitionsFor$uchar.groups.group${\$uchar.groups.group$font}{}
+$endfor$
+$endif$
+$if(uchar.blocks)$
+$for(uchar.blocks)$
+\setTransitionTo{$uchar.blocks.block$}{\$uchar.blocks.block$font}
+$endfor$
+$endif$
 $endif$

@@ -21,8 +21,16 @@ abstract: |
   This abstract serves as a generic template to guide authors in crafting effective summaries of their academic work. An ideal abstract should succinctly present the purpose of the study, the methodology employed, the key findings, and the principal conclusions. Begin by clearly stating the research question or objective, ensuring it reflects the core focus of the article. Follow with a brief description of the methods used, highlighting the design, data sources, and analytical techniques where applicable. Then, summarize the most significant results, avoiding excessive detail or technical jargon. Conclude with a statement on the broader implications or potential applications of the findings. The abstract should be self-contained, written in the past tense (except for conclusions or implications, which may be in the present), and limited to 200–250 words. Avoid citations, abbreviations, or references to tables and figures. Emphasize clarity, precision, and coherence to ensure accessibility to a wide readership, including those outside the immediate disciplinary field.
 keywords: [template, demo]
 bibliography: bibliography.bib
+uchar:
+  groups:
+    - group: CJK
+      font: Yuppy SC
+    - group: Devanagari
+      font: Noto Serif Devanagari
 ---
 
 ## Introduction {#sec-intro}
 
 *TODO* Create a template that demonstrates the appearance, formatting, layout, and functionality of your format. Learn more about journal formats at <https://quarto.org/docs/journals/>.
+
+You can mix scripts thanks to the LaTeX package `ucharclasses`. For example, this is Chinese 爱荷 and this is Sankrit देवनागरी *devanāgarī* . The Latin font is Source Sans Pro and should not be changed. Source Sans Pro also supports the International Phonetic Alphabet: [ˌɪntəˈnæʃənəl fəˈnɛtɪk ˈælfəbɛt].

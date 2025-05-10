@@ -9,7 +9,8 @@ contributes:
       filters:
         - rrling.lua
     pdf:
-      include-in-header: header.tex
+      include-in-header:
+        - header.tex
       toc: false
       number-sections: true
       keep-tex: true 
@@ -17,8 +18,8 @@ contributes:
       documentclass: rrling
       template-partials:
         - "partials/title.tex"
-        - "partials/_authors.tex"
         - "partials/_affiliations.tex"
+        - "partials/_authors.tex"
         - "partials/before-body.tex"
       format-resources:
         - rrling.cls
