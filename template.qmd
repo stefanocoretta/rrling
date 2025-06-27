@@ -29,8 +29,192 @@ uchar:
       font: Noto Serif Devanagari
 ---
 
-## Introduction {#sec-intro}
+## The RRLing templates {.unnumbered}
 
-*TODO* Create a template that demonstrates the appearance, formatting, layout, and functionality of your format. Learn more about journal formats at <https://quarto.org/docs/journals/>.
+All submissions to Registered Reports in Linguistics (RRLing) must use this Quarto template or the companion LaTeX template. We strongly encourage authors to use the Quarto template (especially if their study involves any type of statistical analysis). If you are new to both LaTeX and Quarto, then we suggest to learn Quarto for a smoother writing experience.
 
-You can mix scripts thanks to the LaTeX package `ucharclasses`. For example, this is Chinese 爱荷 and this is Sankrit देवनागरी *devanāgarī* . The Latin font is Source Sans Pro and should not be changed. Source Sans Pro also supports the International Phonetic Alphabet: [ˌɪntəˈnæʃənəl fəˈnɛtɪk ˈælfəbɛt].
+### LaTeX {.unnumbered}
+
+If you are new to LaTeX, you can learn the basics here: <https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes>. The template can be used online on Overleaf (<https://www.overleaf.com>) or can be downloaded to your computer. The template is designed to showcase the basic structure of an article submitted to RRLing, including examples of specific typesetting requirements.
+
+### Quarto {.unnumbered}
+
+Quarto (<https://quarto.org>) is a new publishing system that allows you to write text and code in a single document. The document can be rendered to a variety of formats, including the PDF format required for submission to RRLing.
+
+A Quarto document can dynamically include in the rendered document the output of computational code, such as summary tables and plots, with the advantage that, if the code changes, the new output is automatically reflected in the document when rendered. An introduction to using Quarto can be found here: <https://quarto.org/docs/get-started/>. This Quarto template is available here: <https://github.com/stefanocoretta/rrling>.
+
+## Article structure {#article-structure .unnumbered}
+
+All articles submitted to RRLing should have the following structure:
+
+1.  Introduction
+
+2.  Methods
+
+3.  Results
+
+4.  Discussion
+
+5.  Conclusion
+
+6.  (unnumbered) CRediT roles
+
+7.  (unnumbered) Acknowledgements (optional)
+
+8.  (unnumbered) Open Research statement
+
+9.  (unnumbered) Conflict of interest
+
+Note that in the Stage 1 manuscript, only the following sections are
+necessary: Introduction, Methods, CRediT roles, Open Research statement,
+Conflict of interest. You will not be able to make changes to the
+Introduction and Methods section in the Stage 2 manuscript (barring
+minor typographical or grammatical edits).
+
+You should also provide an abstract (250 words max), keywords and a link
+to the Research Compendium of the study (this can be a URL or a DOI).
+The Research Compendium is an online repository containing all the
+materials of the study, including but not limited to, all stimuli, data,
+code, figures, and so on.
+
+The following sections mirror the sections that articles submitted to
+RRLing should have. Each section provides information on what the
+section should include. Within each section, it is up to the author to
+include subsections (no specific requirements are in place in this case,
+but we encourage authors to make use of subsections to aid readers).
+
+## Introduction
+
+The Introduction should include a general overview of the research
+topic, followed by a review of existing relevant literature to summarise
+existing knowledge. It is not expected that authors include all the
+existing literature, under the assumption that due diligence was carried
+out. We rather encourage authors to point readers to existing literature
+reviews, if they exist and are relevant. Suggested subsections include a
+"Background" or "Literature Review" subsection and a "Research
+Questions/Hypotheses" subsection.
+
+### Typography {#typography .unnumbered}
+
+#### Typefaces
+
+You can mix scripts thanks to the LaTeX package `ucharclasses`. For
+example, this is Chinese 普通話 *pǔtōnghuà* and this is Sankrit देवनागरी
+*devanāgarī*. The Latin font is Source Sans Pro and should not be
+changed. Source Sans Pro also includes graphs from the International
+Phonetic Alphabet: \[ˌɪntəˈnæʃənəl fəˈnɛtɪk ˈælfəbɛt\].
+
+#### Tables and figures
+
+You can include tables like @tbl-letters. The caption will be placed above the table. You can
+also include figures, like @fig-example. Place the caption below the figure. Note that
+table and figure positioning is managed by LaTeX: do not force placement
+with LaTeXplacement options. You can use sub-figures and a two-column
+layout if it uses the space better.
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| A    | B    | C    |
+| E    | F    | G    |
+| A    | G    | G    |
+
+: My Caption {#tbl-letters}
+
+![The Registered Reports in Linguistics
+logo.](rrling-logo-bg.png){#fig-example width="25%"}
+
+#### Linguistic examples and interlinear glosses
+
+If you need to include linguistic examples or interlinear glosses, please use the interlinear Quarto extension: <https://github.com/stefanocoretta/interlinear>. If the extension is too limited for your glossing needs, we recommend to use the LaTeX template instead so that you can exploit the full capabilities of the LaTeX package expex.
+
+## Methods
+
+The Methods section should provide detailed information about the
+methods that will be employed in the study after In Principle Acceptance
+of the Stage 1 Registered Report manuscript. There should be enough
+details for reviewers to be able to reproduce exactly the same pipeline
+employed in the study (at Stage 1) and for reviewers and independent
+researchers to obtain the same results which will be reported on the
+Stage 2 manuscript. This level of detail will also make replication
+attempts more straightforward.
+
+Note that, according to principles of Open Research which are mandated
+for submission to this Journal, you must ensure that all materials
+belonging to the Methods section at Stage 1 are available, including
+e.g. task-related files, programming code, questionnaires, interview
+prompts, deductive models for thematic analysis, pre-existing corpora
+etc.
+
+## Results
+
+After your Stage 1 manuscript has been In Principle Accepted and you
+have conducted your study, this section in the Stage 2 manuscript should
+report the results of the methods described in the previous session. The
+outcome of all registered analysis from the Stage 1 manuscript must be
+reported in this section. Further, non-registered analyses, can be
+included under a separate subsection and clearly flagged as
+non-registered (for example in a subsection called "Non-registered
+analyses").
+
+As stated above, Open Research principle are mandated for submission to
+this Journal, so all materials that have been output by the methods
+described in the previous section must be openly available. \"Upon
+request\" availability is not acceptable (but online restricted access
+only in exceptional cases is) and it is up to the authors to ensure that
+proper permission is granted by participants (if the study includes data
+obtained in this manner). Materials as intended here include, but are
+not limited to, original audio or video recordings, transcripts,
+experimental code, stimuli, gathered data files, researchers' notebooks,
+derived data, annotations, statistical code etc.
+
+## Discussion
+
+The discussion section, to be added at Stage 2, will include the
+author's interpretation of the findings reported in the previous
+section, in light of the research topic, questions and/or hypothesis
+presented in the Introduction. We recommend to keep the discussion
+section short and to the point, while ensuring that due weight is given
+to the evidentiary level of the research findings (i.e. any claim made
+in this section should be of a magnitude that does not exceed the
+magnitude of evidence and uncertainty that characterise the findings).
+Suggested further subsections include "Limitations" and "Future
+work/Open questions".
+
+## Conclusion
+
+The Conclusion section should briefly summarise the research topic,
+questions and/or hypotheses and highlight the main findings in light of
+existing gaps. We recommend to write a conclusion that could be read as
+stand-alone. It is acceptable for the conclusion to mirror the structure
+of the abstract and be an edited and slightly extended version of the
+abstract.
+
+## CRediT roles {#credit-roles .unnumbered}
+
+This section must include a list of all authors with Contributor Role
+Taxonomy (CRediT) roles listed for each author. See
+<https://credit.niso.org>. All authors in the paper must either have a
+"Writing -- original draft" role or a "Writing -- review & editing" and
+all authors must have at least two roles.
+
+## Acknowledgements {#acknowledgements .unnumbered}
+
+You can use this section to acknowledge feedback and support by external
+individuals or institutions.
+
+## Open Research statement {#open-research-statement .unnumbered}
+
+You are required to publicly share the Research Compendium of the study,
+which must include all materials like data, code, stimuli,
+questionnaires, figures etc. All analyses must be computationally
+reproducible (when applicable) or documented to the highest detail and
+level of transparency. This section must contain at least the following
+statement, where XXX is a link, a DOI, or a (data) citation:
+
+> The Research Compendium of the study is available at XXX.
+
+## Conflict of interest {#conflict-of-interest .unnumbered}
+
+You should report here any conflict of interest. If you have no conflict
+of interest, write: The authors confirm that there are no conflicts of
+interest.
