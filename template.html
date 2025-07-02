@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Stefano Coretta">
+<meta name="author" content="Jessica Hampton">
+<meta name="keywords" content="template, demo">
+
+<title>Registered Reports in Linguistics: Quarto template</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="template_files/libs/clipboard/clipboard.min.js"></script>
+<script src="template_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="template_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="template_files/libs/quarto-html/popper.min.js"></script>
+<script src="template_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="template_files/libs/quarto-html/anchor.min.js"></script>
+<link href="template_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="template_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="template_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="template_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="template_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+<link rel="stylesheet" href="_extensions/rrling/styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-rrling-templates" id="toc-the-rrling-templates" class="nav-link active" data-scroll-target="#the-rrling-templates">The RRLing templates</a>
+  <ul class="collapse">
+  <li><a href="#latex" id="toc-latex" class="nav-link" data-scroll-target="#latex">LaTeX</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  </ul></li>
+  <li><a href="#article-structure" id="toc-article-structure" class="nav-link" data-scroll-target="#article-structure">Article structure</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#typography" id="toc-typography" class="nav-link" data-scroll-target="#typography">Typography</a></li>
+  </ul></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#credit-roles" id="toc-credit-roles" class="nav-link" data-scroll-target="#credit-roles">CRediT roles</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#open-research-statement" id="toc-open-research-statement" class="nav-link" data-scroll-target="#open-research-statement">Open Research statement</a></li>
+  <li><a href="#conflict-of-interest" id="toc-conflict-of-interest" class="nav-link" data-scroll-target="#conflict-of-interest">Conflict of interest</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="template.pdf"><i class="bi bi-file-pdf"></i>PDF (rrling)</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Registered Reports in Linguistics: Quarto template</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Stefano Coretta <a href="https://orcid.org/0000-0001-9627-5532" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of Edinburgh
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Jessica Hampton <a href="https://orcid.org/0000-0001-6871-2846" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of of Liverpool
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>This abstract serves as a generic template to guide authors in crafting effective summaries of their academic work. An ideal abstract should succinctly present the purpose of the study, the methodology employed, the key findings, and the principal conclusions. Begin by clearly stating the research question or objective, ensuring it reflects the core focus of the article. Follow with a brief description of the methods used, highlighting the design, data sources, and analytical techniques where applicable. Then, summarize the most significant results, avoiding excessive detail or technical jargon. Conclude with a statement on the broader implications or potential applications of the findings. The abstract should be self-contained, written in the past tense (except for conclusions or implications, which may be in the present), and limited to 200–250 words. Avoid citations, abbreviations, or references to tables and figures. Emphasize clarity, precision, and coherence to ensure accessibility to a wide readership, including those outside the immediate disciplinary field.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>template, demo</p>
+  </div>
+</div>
+
+</header>
+
+
+<section id="the-rrling-templates" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="the-rrling-templates">The RRLing templates</h2>
+<p>All submissions to Registered Reports in Linguistics (RRLing) must use this Quarto template (<a href="https://github.com/stefanocoretta/rrling" class="uri">https://github.com/stefanocoretta/rrling</a>) or the companion LaTeX template (<a href="https://www.overleaf.com/read/bbcpjgrnvpny#8ae823" class="uri">https://www.overleaf.com/read/bbcpjgrnvpny#8ae823</a>). We strongly encourage authors to use the Quarto template (especially if their study involves any type of statistical analysis). If you are new to both LaTeX and Quarto, then we suggest to use Quarto with RStudio/Positron for a smoother writing experience if your study has computational code (so that you can embed the code in the manuscript), or to use LaTeX on Overleaf if you don’t need support for computational code in the manuscript.</p>
+<p><strong>Both Quarto and LaTeX documents can be rendered to PDF and this will be the final format used for accepted papers. Note that we will not accept papers that are not written with one of the templates.</strong> This is because we don’t have resources for typesetting accepted articles and by using the official templates, no further special typesetting is needed.</p>
+<section id="latex" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="latex">LaTeX</h3>
+<p>If you are new to LaTeX, you can learn the basics here: <a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" class="uri">https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes</a>. The LaTeX template can be found at <a href="https://www.overleaf.com/read/bbcpjgrnvpny#8ae823" class="uri">https://www.overleaf.com/read/bbcpjgrnvpny#8ae823</a> and used online on Overleaf (<a href="https://www.overleaf.com" class="uri">https://www.overleaf.com</a>) or can be downloaded to your computer. The template is designed to showcase the basic structure of an article submitted to RRLing, including examples of specific typesetting requirements.</p>
+</section>
+<section id="quarto" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="quarto">Quarto</h3>
+<p>Quarto (<a href="https://quarto.org" class="uri">https://quarto.org</a>) is a new publishing system that allows you to write text and code in a single document. The document can be rendered to a variety of formats, including the PDF format required for submission to RRLing.</p>
+<p>A Quarto document can dynamically include in the rendered document the output of computational code, such as summary tables and plots, with the advantage that, if the code changes, the new output is automatically reflected in the document when rendered. An introduction to using Quarto can be found here: <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>. This Quarto template is available here: <a href="https://github.com/stefanocoretta/rrling" class="uri">https://github.com/stefanocoretta/rrling</a>.</p>
+<p>The Quarto template for submissions to RRLing can be found at <a href="https://github.com/stefanocoretta/rrling" class="uri">https://github.com/stefanocoretta/rrling</a>. We recommend using RStudio/Positron to write with the Quarto template, but any other workflow you already use will do.</p>
+</section>
+</section>
+<section id="article-structure" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="article-structure">Article structure</h2>
+<p>All articles submitted to RRLing should have the following structure:</p>
+<ol type="1">
+<li><p>Introduction</p></li>
+<li><p>Methods</p></li>
+<li><p>Results</p></li>
+<li><p>Discussion</p></li>
+<li><p>Conclusion</p></li>
+<li><p>(unnumbered) CRediT roles</p></li>
+<li><p>(unnumbered) Acknowledgements (optional)</p></li>
+<li><p>(unnumbered) Open Research statement</p></li>
+<li><p>(unnumbered) Conflict of interest</p></li>
+<li><p>(unnumbered) References</p></li>
+</ol>
+<p>Note that in the Stage 1 manuscript, only the following sections are necessary: Introduction, Methods, CRediT roles, Open Research statement, Conflict of interest. You will not be able to make changes to the Introduction and Methods section in the Stage 2 manuscript (barring minor typographical or grammatical edits).</p>
+<p>You should also provide an abstract (250 words max), keywords and a link to the Research Compendium of the study (this can be a URL or a DOI). The Research Compendium is an online repository containing all the materials of the study, including but not limited to, all stimuli, data, code, figures, and so on.</p>
+<p>The following sections mirror the sections that articles submitted to RRLing should have. Each section provides information on what the section should include. Within each section, it is up to the author to include subsections (no specific requirements are in place in this case, but we encourage authors to make use of subsections to aid readers).</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The Introduction should include a general overview of the research topic, followed by a review of existing relevant literature to summarise existing knowledge. It is not expected that authors include all the existing literature, under the assumption that due diligence was carried out. We rather encourage authors to point readers to existing literature reviews, if they exist and are relevant. Suggested subsections include a “Background” or “Literature Review” subsection and a “Research Questions/Hypotheses” subsection.</p>
+<section id="typography" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="typography">Typography</h3>
+<section id="typefaces" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="typefaces">Typefaces</h4>
+<p>You can mix scripts thanks to the LaTeX package <code>ucharclasses</code>. For example, this is Chinese 普通話 <em>pǔtōnghuà</em> and this is Sankrit देवनागरी <em>devanāgarī</em>. The Latin font is Source Sans Pro and should not be changed. Source Sans Pro also includes graphs from the International Phonetic Alphabet: [ˌɪntəˈnæʃənəl fəˈnɛtɪk ˈælfəbɛt].</p>
+</section>
+<section id="tables-and-figures" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="tables-and-figures">Tables and figures</h4>
+<p>You can include tables like <a href="#tbl-letters" class="quarto-xref">Table&nbsp;1</a>. The caption will be placed above the table. You can also include figures, like <a href="#fig-example" class="quarto-xref">Figure&nbsp;1</a>. Place the caption below the figure. Note that table and figure positioning is managed by LaTeX: do not force placement with LaTeXplacement options. You can use sub-figures and a two-column layout if it uses the space better.</p>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: My Caption
+</figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Col1</th>
+<th>Col2</th>
+<th>Col3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>B</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>E</td>
+<td>F</td>
+<td>G</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>G</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-example" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="rrling-logo-bg.png" class="img-fluid figure-img" style="width:25.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The Registered Reports in Linguistics logo.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="linguistic-examples-and-interlinear-glosses" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="linguistic-examples-and-interlinear-glosses">Linguistic examples and interlinear glosses</h4>
+<p>If you need to include linguistic examples or interlinear glosses, please use the interlinear Quarto extension: <a href="https://github.com/stefanocoretta/interlinear" class="uri">https://github.com/stefanocoretta/interlinear</a>. If the extension is too limited for your glossing needs, we recommend to use the LaTeX template instead so that you can exploit the full capabilities of the LaTeX package expex.</p>
+</section>
+<section id="bibliography" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="bibliography">Bibliography</h4>
+<p>The <code>bibliography.bib</code> file has a few example entries in BiBTeX format. To cite use the <a href="https://quarto.org/docs/authoring/citations.html">Quarto citation syntax</a>: for example <span class="citation" data-cites="alfarano2021">Alfarano (<a href="#ref-alfarano2021" role="doc-biblioref">2021</a>)</span>. You can also include both author and year within the parentheses <span class="citation" data-cites="croft2002">(<a href="#ref-croft2002" role="doc-biblioref">Croft 2002</a>)</span>. You can specify pages and custom text <span class="citation" data-cites="jakobson1951 lindsey2017">(see <a href="#ref-jakobson1951" role="doc-biblioref">Jakobson, Fant &amp; Halle 1951: 47–52</a>; and <a href="#ref-lindsey2017" role="doc-biblioref">Lindsey 2017</a>)</span>.</p>
+<p>Bibliographical entries will be added to the (unnumbered) <code>References</code> section at the end of the article.</p>
+</section>
+</section>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<p>The Methods section should provide detailed information about the methods that will be employed in the study after In Principle Acceptance of the Stage 1 Registered Report manuscript. There should be enough details for reviewers to be able to reproduce exactly the same pipeline employed in the study (at Stage 1) and for reviewers and independent researchers to obtain the same results which will be reported on the Stage 2 manuscript. This level of detail will also make replication attempts more straightforward.</p>
+<p>Note that, according to principles of Open Research which are mandated for submission to this Journal, you must ensure that all materials belonging to the Methods section at Stage 1 are available, including e.g.&nbsp;task-related files, programming code, questionnaires, interview prompts, deductive models for thematic analysis, pre-existing corpora etc.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>After your Stage 1 manuscript has been In Principle Accepted and you have conducted your study, this section in the Stage 2 manuscript should report the results of the methods described in the previous session. The outcome of all registered analysis from the Stage 1 manuscript must be reported in this section. Further, non-registered analyses, can be included under a separate subsection and clearly flagged as non-registered (for example in a subsection called “Non-registered analyses”).</p>
+<p>As stated above, Open Research principle are mandated for submission to this Journal, so all materials that have been output by the methods described in the previous section must be openly available. "Upon request" availability is not acceptable (but online restricted access only in exceptional cases is) and it is up to the authors to ensure that proper permission is granted by participants (if the study includes data obtained in this manner). Materials as intended here include, but are not limited to, original audio or video recordings, transcripts, experimental code, stimuli, gathered data files, researchers’ notebooks, derived data, annotations, statistical code etc.</p>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>The discussion section, to be added at Stage 2, will include the author’s interpretation of the findings reported in the previous section, in light of the research topic, questions and/or hypothesis presented in the Introduction. We recommend to keep the discussion section short and to the point, while ensuring that due weight is given to the evidentiary level of the research findings (i.e.&nbsp;any claim made in this section should be of a magnitude that does not exceed the magnitude of evidence and uncertainty that characterise the findings). Suggested further subsections include “Limitations” and “Future work/Open questions”.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The Conclusion section should briefly summarise the research topic, questions and/or hypotheses and highlight the main findings in light of existing gaps. We recommend to write a conclusion that could be read as stand-alone. It is acceptable for the conclusion to mirror the structure of the abstract and be an edited and slightly extended version of the abstract.</p>
+</section>
+<section id="credit-roles" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="credit-roles">CRediT roles</h2>
+<p>This section must include a list of all authors with Contributor Role Taxonomy (CRediT) roles listed for each author. See <a href="https://credit.niso.org" class="uri">https://credit.niso.org</a>. All authors in the paper must either have a “Writing – original draft” role or a “Writing – review &amp; editing” and all authors must have at least two roles.</p>
+</section>
+<section id="acknowledgements" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>You can use this section to acknowledge feedback and support by external individuals or institutions.</p>
+</section>
+<section id="open-research-statement" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="open-research-statement">Open Research statement</h2>
+<p>You are required to publicly share the Research Compendium of the study, which must include all materials like data, code, stimuli, questionnaires, figures etc. All analyses must be computationally reproducible (when applicable) or documented to the highest detail and level of transparency. This section must contain at least the following statement, where XXX is a link, a DOI, or a (data) citation:</p>
+<blockquote class="blockquote">
+<p>The Research Compendium of the study is available at XXX.</p>
+</blockquote>
+<p>With a data citation.</p>
+<blockquote class="blockquote">
+<p>The Research Compendium of the study is available as <span class="citation" data-cites="coretta2025">Coretta, Hampton &amp; De Cia (<a href="#ref-coretta2025" role="doc-biblioref">2025</a>)</span>.</p>
+</blockquote>
+</section>
+<section id="conflict-of-interest" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="conflict-of-interest">Conflict of interest</h2>
+<p>You should report here any conflict of interest. If you have no conflict of interest, write: The authors confirm that there are no conflicts of interest.</p>
+</section>
+<section id="references" class="level2 unnumbered">
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-alfarano2021" class="csl-entry" role="listitem">
+Alfarano, Valentina. 2021. <em>A grammar of <span class="nocase">Nal<span class="nocase">ö</span>go</span>, an <span>Oceanic</span> language of <span>Santa Cruz</span></em>. Institut National des Langues et Civilisations Orientales (LACITO), Paris PhD thesis.
+</div>
+<div id="ref-coretta2025" class="csl-entry" role="listitem">
+Coretta, Stefano, Jessica Hampton &amp; Simone De Cia. 2025. Vitality assessment of <span>Gallo-Romance</span> of <span>Northern Italy</span> [<span>Research Compendium</span> v1.0]. Zenodo. <a href="https://doi.org/10.5281/ZENODO.15715938">https://doi.org/10.5281/ZENODO.15715938</a> (22 June, 2025).
+</div>
+<div id="ref-croft2002" class="csl-entry" role="listitem">
+Croft, William. 2002. <em>Typology and universals</em>. Cambridge: Cambridge University Press. <a href="https://doi.org/10.1002/9781119072256.ch3">https://doi.org/10.1002/9781119072256.ch3</a>.
+</div>
+<div id="ref-jakobson1951" class="csl-entry" role="listitem">
+Jakobson, Roman, Gunnar Fant &amp; Morris Halle. 1951. <em>Preliminaries to speech analysis. <span>The</span> distinctive features and their correlates</em>. MIT Press, Cambridge MA.
+</div>
+<div id="ref-lindsey2017" class="csl-entry" role="listitem">
+Lindsey, Geoff. 2017. The vowel space. <a href="https://www.englishspeechservices.com/blog/the-vowel-space/" class="uri">https://www.englishspeechservices.com/blog/the-vowel-space/</a>.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
