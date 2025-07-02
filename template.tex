@@ -91,6 +91,39 @@
 \makeatother
 
 
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 
 
@@ -188,10 +221,13 @@ or references to tables and figures. Emphasize clarity, precision, and
 coherence to ensure accessibility to a wide readership, including those
 outside the immediate disciplinary field.}
 \keywords{template, demo}
+\rescompendium{https://www.doi.org/10.1000/182}
 
-\newfontfamily{\defaultfont}{Source Sans Pro}
-\newfontfamily{\CJKfont}{Yuppy SC}
-\newfontfamily{\Devanagarifont}{Noto Serif Devanagari}
+\newfontfamily{\defaultfont}[Mapping=tex-text]{Source Sans Pro}
+\newfontfamily{\CJKfont}[ItalicFont={Source Sans Pro Italic},BoldFont={Source Sans Pro Semibold},BoldItalicFont={Source Sans Pro Semibold Italic}]{Yuppy
+SC}
+\newfontfamily{\Devanagarifont}[ItalicFont={Source Sans Pro Italic},BoldFont={Source Sans Pro Semibold},BoldItalicFont={Source Sans Pro Semibold Italic}]{Noto
+Serif Devanagari}
 \usepackage[Latin,CJK,Devanagari,]{ucharclasses}
 \setTransitionsForLatin{\defaultfont}{}
 \setTransitionsForCJK{\CJKfont}{}
@@ -205,22 +241,34 @@ outside the immediate disciplinary field.}
 \addcontentsline{toc}{section}{The RRLing templates}
 
 All submissions to Registered Reports in Linguistics (RRLing) must use
-this Quarto template or the companion LaTeX template. We strongly
+this Quarto template (\url{https://github.com/stefanocoretta/rrling}) or
+the companion LaTeX template
+(\url{https://www.overleaf.com/read/bbcpjgrnvpny\#8ae823}). We strongly
 encourage authors to use the Quarto template (especially if their study
 involves any type of statistical analysis). If you are new to both LaTeX
-and Quarto, then we suggest to learn Quarto for a smoother writing
-experience.
+and Quarto, then we suggest to use Quarto with RStudio/Positron for a
+smoother writing experience if your study has computational code (so
+that you can embed the code in the manuscript), or to use LaTeX on
+Overleaf if you don't need support for computational code in the
+manuscript.
+
+\textbf{Both Quarto and LaTeX documents can be rendered to PDF and this
+will be the final format used for accepted papers. Note that we will not
+accept papers that are not written with one of the templates.} This is
+because we don't have resources for typesetting accepted articles and by
+using the official templates, no further special typesetting is needed.
 
 \subsection*{LaTeX}\label{latex}
 \addcontentsline{toc}{subsection}{LaTeX}
 
 If you are new to LaTeX, you can learn the basics here:
 \url{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}.
-The template can be used online on Overleaf
-(\url{https://www.overleaf.com}) or can be downloaded to your computer.
-The template is designed to showcase the basic structure of an article
-submitted to RRLing, including examples of specific typesetting
-requirements.
+The LaTeX template can be found at
+\url{https://www.overleaf.com/read/bbcpjgrnvpny\#8ae823} and used online
+on Overleaf (\url{https://www.overleaf.com}) or can be downloaded to
+your computer. The template is designed to showcase the basic structure
+of an article submitted to RRLing, including examples of specific
+typesetting requirements.
 
 \subsection*{Quarto}\label{quarto}
 \addcontentsline{toc}{subsection}{Quarto}
@@ -237,6 +285,11 @@ reflected in the document when rendered. An introduction to using Quarto
 can be found here: \url{https://quarto.org/docs/get-started/}. This
 Quarto template is available here:
 \url{https://github.com/stefanocoretta/rrling}.
+
+The Quarto template for submissions to RRLing can be found at
+\url{https://github.com/stefanocoretta/rrling}. We recommend using
+RStudio/Positron to write with the Quarto template, but any other
+workflow you already use will do.
 
 \section*{Article structure}\label{article-structure}
 \addcontentsline{toc}{section}{Article structure}
@@ -263,6 +316,8 @@ All articles submitted to RRLing should have the following structure:
   (unnumbered) Open Research statement
 \item
   (unnumbered) Conflict of interest
+\item
+  (unnumbered) References
 \end{enumerate}
 
 Note that in the Stage 1 manuscript, only the following sections are
@@ -297,7 +352,8 @@ Questions/Hypotheses'' subsection.
 \subsection*{Typography}\label{typography}
 \addcontentsline{toc}{subsection}{Typography}
 
-\subsubsection{Typefaces}\label{typefaces}
+\subsubsection*{Typefaces}\label{typefaces}
+\addcontentsline{toc}{subsubsection}{Typefaces}
 
 You can mix scripts thanks to the LaTeX package \texttt{ucharclasses}.
 For example, this is Chinese 普通話 \emph{pǔtōnghuà} and this is Sankrit
@@ -305,7 +361,8 @@ For example, this is Chinese 普通話 \emph{pǔtōnghuà} and this is Sankrit
 not be changed. Source Sans Pro also includes graphs from the
 International Phonetic Alphabet: {[}ˌɪntəˈnæʃənəl fəˈnɛtɪk ˈælfəbɛt{]}.
 
-\subsubsection{Tables and figures}\label{tables-and-figures}
+\subsubsection*{Tables and figures}\label{tables-and-figures}
+\addcontentsline{toc}{subsubsection}{Tables and figures}
 
 You can include tables like Table~\ref{tbl-letters}. The caption will be
 placed above the table. You can also include figures, like
@@ -343,8 +400,10 @@ A & G & G \\
 
 \end{figure}%
 
-\subsubsection{Linguistic examples and interlinear
+\subsubsection*{Linguistic examples and interlinear
 glosses}\label{linguistic-examples-and-interlinear-glosses}
+\addcontentsline{toc}{subsubsection}{Linguistic examples and interlinear
+glosses}
 
 If you need to include linguistic examples or interlinear glosses,
 please use the interlinear Quarto extension:
@@ -352,6 +411,20 @@ please use the interlinear Quarto extension:
 too limited for your glossing needs, we recommend to use the LaTeX
 template instead so that you can exploit the full capabilities of the
 LaTeX package expex.
+
+\subsubsection*{Bibliography}\label{bibliography}
+\addcontentsline{toc}{subsubsection}{Bibliography}
+
+The \texttt{bibliography.bib} file has a few example entries in BiBTeX
+format. To cite use the
+\href{https://quarto.org/docs/authoring/citations.html}{Quarto citation
+syntax}: for example Alfarano (2021). You can also include both author
+and year within the parentheses (Croft 2002). You can specify pages and
+custom text (see Jakobson, Fant \& Halle 1951: 47--52; and Lindsey
+2017).
+
+Bibliographical entries will be added to the (unnumbered)
+\texttt{References} section at the end of the article.
 
 \section{Methods}\label{methods}
 
@@ -444,12 +517,51 @@ statement, where XXX is a link, a DOI, or a (data) citation:
 The Research Compendium of the study is available at XXX.
 \end{quote}
 
+With a data citation.
+
+\begin{quote}
+The Research Compendium of the study is available as Coretta, Hampton \&
+De Cia (2025).
+\end{quote}
+
 \section*{Conflict of interest}\label{conflict-of-interest}
 \addcontentsline{toc}{section}{Conflict of interest}
 
 You should report here any conflict of interest. If you have no conflict
 of interest, write: The authors confirm that there are no conflicts of
 interest.
+
+\section*{References}\label{references}
+\addcontentsline{toc}{section}{References}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-alfarano2021}
+Alfarano, Valentina. 2021. \emph{A grammar of {Nal{ö}go}, an {Oceanic}
+language of {Santa Cruz}}. Institut National des Langues et
+Civilisations Orientales (LACITO), Paris PhD thesis.
+
+\bibitem[\citeproctext]{ref-coretta2025}
+Coretta, Stefano, Jessica Hampton \& Simone De Cia. 2025. Vitality
+assessment of {Gallo-Romance} of {Northern Italy} {[}{Research
+Compendium} v1.0{]}. Zenodo.
+\url{https://doi.org/10.5281/ZENODO.15715938} (22 June, 2025).
+
+\bibitem[\citeproctext]{ref-croft2002}
+Croft, William. 2002. \emph{Typology and universals}. Cambridge:
+Cambridge University Press.
+\url{https://doi.org/10.1002/9781119072256.ch3}.
+
+\bibitem[\citeproctext]{ref-jakobson1951}
+Jakobson, Roman, Gunnar Fant \& Morris Halle. 1951. \emph{Preliminaries
+to speech analysis. {The} distinctive features and their correlates}.
+MIT Press, Cambridge MA.
+
+\bibitem[\citeproctext]{ref-lindsey2017}
+Lindsey, Geoff. 2017. The vowel space.
+\url{https://www.englishspeechservices.com/blog/the-vowel-space/}.
+
+\end{CSLReferences}
 
 
 

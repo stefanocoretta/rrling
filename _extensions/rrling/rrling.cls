@@ -38,6 +38,12 @@
 \fancyhf{}
 \fancyhead[L]{\textit{Registered Reports in Linguistics}}
 \fancyhead[R]{Authors}
+\fancyfoot[R]{\thepage}
+\fancypagestyle{empty}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[R]{\thepage}
+}
 \thispagestyle{empty}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,6 +56,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Set preamble commands
 \newcommand{\keywords}[1]{\def\@keywords{#1}}
+\newcommand{\rescompendium}[1]{\def\@rescompendium{#1}}
 \renewcommand{\abstract}[1]{\def\@abstract{#1}}
 
 \newcommand{\@authors}{}
@@ -67,13 +74,15 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Redefine \maketitle
+\RequirePackage{lastpage}
+
 \renewcommand{\maketitle}{
     \vspace*{-7em}
     \noindent
     \begin{minipage}[b]{0.7\textwidth}
-        \textbf{Registered Reports in Linguistics}, \the\year, 1--XX
+        \textbf{Registered Reports in Linguistics}, \the\year, 1--\pageref{LastPage}
         \vspace{0.25em}\\
-        \textcolor{yellow}{\aiDoi} 10.1000/182 \\
+        \textcolor{yellow}{\aiDoi} .../... \\
         Research article \textcolor{red}{\aiPreregistered} \textcolor{blue}{\aiOpenData} \textcolor{orange}{\aiOpenMaterials}
     \end{minipage}%
     \hfill
@@ -95,9 +104,9 @@
     \fi
     \vskip 1em
     \ifx\@keywords\@empty\else
-        {\sffamily\noindent\bfseries Keywords:} \@keywords \par
+        {\sffamily\noindent\bfseries Keywords}: \@keywords \par
     \fi
-    {\sffamily\noindent\bfseries Research Compendium}: \textcolor{yellow}{\aiDoi} https://www.doi.org/10.1000/182 \par
+    {\sffamily\noindent\bfseries Research Compendium}: \textcolor{yellow}{\aiDoi} \url{\@rescompendium} \par
     \vspace{1em}\noindent\rule{\textwidth}{2pt}\par
 }
 
@@ -105,3 +114,4 @@
 % Set defaults
 \def\@abstract{\lipsum[1]}
 \def\@keywords{keyword1, keyword2}
+\def\@rescompendium{https://www.doi.org/10.1000/182}

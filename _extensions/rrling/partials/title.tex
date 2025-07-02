@@ -28,17 +28,20 @@ $endif$
 $if(keywords)$
 \keywords{$for(keywords)$$keywords$$sep$, $endfor$}
 $endif$
+$if(rescompendium)$
+\rescompendium{$rescompendium$}
+$endif$
 
 $if(uchar)$
-\newfontfamily{\defaultfont}{Source Sans Pro}
+\newfontfamily{\defaultfont}[Mapping=tex-text]{Source Sans Pro}
 $if(uchar.groups)$
 $for(uchar.groups)$
-\newfontfamily{\$uchar.groups.group$font}{$uchar.groups.font$}
+\newfontfamily{\$uchar.groups.group$font}[ItalicFont={Source Sans Pro Italic},BoldFont={Source Sans Pro Semibold},BoldItalicFont={Source Sans Pro Semibold Italic}]{$uchar.groups.font$}
 $endfor$
 $endif$
 $if(uchar.blocks)$
 $for(uchar.blocks)$
-\newfontfamily{\$uchar.blocks.block$font}{$uchar.blocks.font$}
+\newfontfamily{\$uchar.blocks.block$font}[ItalicFont={Source Sans Pro Italic},BoldFont={Source Sans Pro Semibold},BoldItalicFont={Source Sans Pro Semibold Italic}]{$uchar.blocks.font$}
 $endfor$
 $endif$
 \usepackage[Latin,$for(uchar.groups)$$uchar.groups.group$$sep$,$endfor$,$for(uchar.blocks)$$uchar.blocks.block$$sep$,$endfor$]{ucharclasses}

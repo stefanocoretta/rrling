@@ -19,8 +19,21 @@ affiliations:
     name: University of of Liverpool
 abstract: |
   This abstract serves as a generic template to guide authors in crafting effective summaries of their academic work. An ideal abstract should succinctly present the purpose of the study, the methodology employed, the key findings, and the principal conclusions. Begin by clearly stating the research question or objective, ensuring it reflects the core focus of the article. Follow with a brief description of the methods used, highlighting the design, data sources, and analytical techniques where applicable. Then, summarize the most significant results, avoiding excessive detail or technical jargon. Conclude with a statement on the broader implications or potential applications of the findings. The abstract should be self-contained, written in the past tense (except for conclusions or implications, which may be in the present), and limited to 200–250 words. Avoid citations, abbreviations, or references to tables and figures. Emphasize clarity, precision, and coherence to ensure accessibility to a wide readership, including those outside the immediate disciplinary field.
+
+# Please, set your keywords here
 keywords: [template, demo]
+
+# Indicate the DOI of your Research Compendium
+rescompendium: "https://www.doi.org/10.1000/182"
+
+# List your bib files here
 bibliography: bibliography.bib
+# Use the Unified stylesheet (please don't change this)
+csl: unified.csl
+
+# If your article includes different scripts, you can specify them here.
+# See the "Typefaces" section below. To test this template you need the Yuppy SC and 
+# Note Seriv Devanagari fonts, which are available on Google Fonts.
 uchar:
   groups:
     - group: CJK
@@ -31,17 +44,21 @@ uchar:
 
 ## The RRLing templates {.unnumbered}
 
-All submissions to Registered Reports in Linguistics (RRLing) must use this Quarto template or the companion LaTeX template. We strongly encourage authors to use the Quarto template (especially if their study involves any type of statistical analysis). If you are new to both LaTeX and Quarto, then we suggest to learn Quarto for a smoother writing experience.
+All submissions to Registered Reports in Linguistics (RRLing) must use this Quarto template (<https://github.com/stefanocoretta/rrling>) or the companion LaTeX template (<https://www.overleaf.com/read/bbcpjgrnvpny#8ae823>). We strongly encourage authors to use the Quarto template (especially if their study involves any type of statistical analysis). If you are new to both LaTeX and Quarto, then we suggest to use Quarto with RStudio/Positron for a smoother writing experience if your study has computational code (so that you can embed the code in the manuscript), or to use LaTeX on Overleaf if you don't need support for computational code in the manuscript.
+
+**Both Quarto and LaTeX documents can be rendered to PDF and this will be the final format used for accepted papers. Note that we will not accept papers that are not written with one of the templates.** This is because we don't have resources for typesetting accepted articles and by using the official templates, no further special typesetting is needed.
 
 ### LaTeX {.unnumbered}
 
-If you are new to LaTeX, you can learn the basics here: <https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes>. The template can be used online on Overleaf (<https://www.overleaf.com>) or can be downloaded to your computer. The template is designed to showcase the basic structure of an article submitted to RRLing, including examples of specific typesetting requirements.
+If you are new to LaTeX, you can learn the basics here: <https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes>. The LaTeX template can be found at <https://www.overleaf.com/read/bbcpjgrnvpny#8ae823> and used online on Overleaf (<https://www.overleaf.com>) or can be downloaded to your computer. The template is designed to showcase the basic structure of an article submitted to RRLing, including examples of specific typesetting requirements.
 
 ### Quarto {.unnumbered}
 
 Quarto (<https://quarto.org>) is a new publishing system that allows you to write text and code in a single document. The document can be rendered to a variety of formats, including the PDF format required for submission to RRLing.
 
 A Quarto document can dynamically include in the rendered document the output of computational code, such as summary tables and plots, with the advantage that, if the code changes, the new output is automatically reflected in the document when rendered. An introduction to using Quarto can be found here: <https://quarto.org/docs/get-started/>. This Quarto template is available here: <https://github.com/stefanocoretta/rrling>.
+
+The Quarto template for submissions to RRLing can be found at <https://github.com/stefanocoretta/rrling>. We recommend using RStudio/Positron to write with the Quarto template, but any other workflow you already use will do.
 
 ## Article structure {#article-structure .unnumbered}
 
@@ -64,6 +81,8 @@ All articles submitted to RRLing should have the following structure:
 8.  (unnumbered) Open Research statement
 
 9.  (unnumbered) Conflict of interest
+
+10. (unnumbered) References
 
 Note that in the Stage 1 manuscript, only the following sections are
 necessary: Introduction, Methods, CRediT roles, Open Research statement,
@@ -96,7 +115,7 @@ Questions/Hypotheses" subsection.
 
 ### Typography {#typography .unnumbered}
 
-#### Typefaces
+#### Typefaces {.unnumbered}
 
 You can mix scripts thanks to the LaTeX package `ucharclasses`. For
 example, this is Chinese 普通話 *pǔtōnghuà* and this is Sankrit देवनागरी
@@ -104,7 +123,7 @@ example, this is Chinese 普通話 *pǔtōnghuà* and this is Sankrit देव�
 changed. Source Sans Pro also includes graphs from the International
 Phonetic Alphabet: \[ˌɪntəˈnæʃənəl fəˈnɛtɪk ˈælfəbɛt\].
 
-#### Tables and figures
+#### Tables and figures {.unnumbered}
 
 You can include tables like @tbl-letters. The caption will be placed above the table. You can
 also include figures, like @fig-example. Place the caption below the figure. Note that
@@ -123,9 +142,15 @@ layout if it uses the space better.
 ![The Registered Reports in Linguistics
 logo.](rrling-logo-bg.png){#fig-example width="25%"}
 
-#### Linguistic examples and interlinear glosses
+#### Linguistic examples and interlinear glosses {.unnumbered}
 
 If you need to include linguistic examples or interlinear glosses, please use the interlinear Quarto extension: <https://github.com/stefanocoretta/interlinear>. If the extension is too limited for your glossing needs, we recommend to use the LaTeX template instead so that you can exploit the full capabilities of the LaTeX package expex.
+
+#### Bibliography {.unnumbered}
+
+The `bibliography.bib` file has a few example entries in BiBTeX format. To cite use the [Quarto citation syntax](https://quarto.org/docs/authoring/citations.html): for example @alfarano2021. You can also include both author and year within the parentheses [@croft2002]. You can specify pages and custom text [see @jakobson1951, pp. 47-52; and @lindsey2017].
+
+Bibliographical entries will be added to the (unnumbered) ``References`` section at the end of the article.
 
 ## Methods
 
@@ -213,8 +238,15 @@ statement, where XXX is a link, a DOI, or a (data) citation:
 
 > The Research Compendium of the study is available at XXX.
 
+With a data citation.
+
+> The Research Compendium of the study is available as @coretta2025.
+
 ## Conflict of interest {#conflict-of-interest .unnumbered}
 
 You should report here any conflict of interest. If you have no conflict
 of interest, write: The authors confirm that there are no conflicts of
 interest.
+
+## References {.unnumbered}
+

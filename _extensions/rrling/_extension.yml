@@ -24,6 +24,7 @@ contributes:
       format-resources:
         - rrling.cls
         - rrling-logo-bg.png
+        - unified.csl
     html:
       css: styles.css
 
