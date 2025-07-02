@@ -12,6 +12,8 @@ author:
     orcid: 0000-0001-6871-2846
     affiliations:
       - ref: UOL
+# Specify the short authors list which is printed in the header
+shortauthors: "Hampton Coretta"
 affiliations:
   - id: UOE
     name: University of Edinburgh

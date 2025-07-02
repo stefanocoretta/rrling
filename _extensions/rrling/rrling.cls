@@ -37,7 +37,7 @@
 \setlength{\headheight}{15pt}
 \fancyhf{}
 \fancyhead[L]{\textit{Registered Reports in Linguistics}}
-\fancyhead[R]{Authors}
+\fancyhead[R]{\@shortauthors}
 \fancyfoot[R]{\thepage}
 \fancypagestyle{empty}{
   \fancyhf{}
@@ -71,6 +71,8 @@
 \NewDocumentCommand{\addaffiliation}{mm}{
     \gappto\@affiliations{\textsuperscript{#1}#2\\}
 }
+
+\newcommand{\shortauthors}[1]{\def\@shortauthors{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Redefine \maketitle
