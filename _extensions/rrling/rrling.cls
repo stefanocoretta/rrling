@@ -31,22 +31,6 @@
 \definecolor{yellow}{RGB}{250,182,08}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Set headers
-\RequirePackage{fancyhdr}
-\pagestyle{fancy}
-\setlength{\headheight}{15pt}
-\fancyhf{}
-\fancyhead[L]{\textit{Registered Reports in Linguistics}}
-\fancyhead[R]{\@shortauthors}
-\fancyfoot[R]{\thepage}
-\fancypagestyle{empty}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{0pt}
-  \fancyfoot[R]{\thepage}
-}
-\thispagestyle{empty}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Set fonts
 \RequirePackage{fontspec}
 % \setmainfont{Source Sans Pro}
@@ -57,6 +41,8 @@
 % Set preamble commands
 \newcommand{\keywords}[1]{\def\@keywords{#1}}
 \newcommand{\rescompendium}[1]{\def\@rescompendium{#1}}
+\newcommand{\stageone}[1]{\def\@stageone{#1}}
+\newcommand{\stagetwo}[1]{\def\@stagetwo{#1}}
 \renewcommand{\abstract}[1]{\def\@abstract{#1}}
 
 \newcommand{\@authors}{}
@@ -73,6 +59,22 @@
 }
 
 \newcommand{\shortauthors}[1]{\def\@shortauthors{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set headers
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\fancyhf{}
+\fancyhead[L]{\textit{Registered Reports in Linguistics}}
+\fancyhead[R]{\@shortauthors}
+\fancyfoot[R]{\thepage}
+\fancypagestyle{empty}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[R]{\thepage}
+}
+\thispagestyle{empty}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Redefine \maketitle
@@ -109,6 +111,16 @@
         {\sffamily\noindent\bfseries Keywords}: \@keywords \par
     \fi
     {\sffamily\noindent\bfseries Research Compendium}: \textcolor{yellow}{\aiDoi} \url{\@rescompendium} \par
+    \ifx\@stageone\@empty
+        {\sffamily\noindent\bfseries PCI RR recommendation [Stage 1]}: {\itshape to be added after Stage 1 recommendation} \par
+    \else
+        {\sffamily\noindent\bfseries PCI RR recommendation [Stage 1]}:  \url{\@stageone} \par
+    \fi
+    \ifx\@stagetwo\@empty
+        {\sffamily\noindent\bfseries PCI RR recommendation [Stage 2]}: {\itshape to be added after Stage 2 recommendation} \par
+    \else
+        {\sffamily\noindent\bfseries PCI RR recommendation [Stage 2]}:  \url{\@stagetwo} \par
+    \fi
     \vspace{1em}\noindent\rule{\textwidth}{2pt}\par
 }
 
@@ -117,3 +129,5 @@
 \def\@abstract{\lipsum[1]}
 \def\@keywords{keyword1, keyword2}
 \def\@rescompendium{https://www.doi.org/10.1000/182}
+\def\@stageone{}
+\def\@stagetwo{}

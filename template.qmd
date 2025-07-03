@@ -28,6 +28,14 @@ keywords: [template, demo]
 # Indicate the DOI of your Research Compendium
 rescompendium: "https://www.doi.org/10.1000/182"
 
+# Use the stageone field to specify the link (url or doi) to the PCI RR recommendation of
+# the Stage 1 manuscript once the manuscript is recommended.
+stageone: ""
+
+# Use the stagetwo field to specify the link (url or doi) to the PCI RR recommendation of
+# the Stage 2 manuscript once the manuscript is recommended.
+stagetwo: ""
+
 # List your bib files here
 bibliography: bibliography.bib
 # Use the Unified stylesheet (please don't change this)
